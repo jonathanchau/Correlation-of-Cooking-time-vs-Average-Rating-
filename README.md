@@ -1,19 +1,40 @@
-# Correlation-of-Cooking-time-vs-Average-Rating-
+# Correlation of Cooking Time vs Average Rating
 
-## This project looks into the correlation of the cooking time of a recipe alongside the average rating.
+## Project Overview
+This project investigates the relationship between the **cooking time of a recipe** and its **average rating**.
 
-## Do longer cooking times often have a higher average rating?
+The goal is to determine whether recipes that take longer to cook tend to receive higher ratings than recipes that take less time.
 
+---
 
-## Null H_0: There is no difference in the average rating between recipes that take 30 minutes or less and recipes that take more than 30 minutes to cook.
+## Research Question
+Do recipes with longer cooking times tend to have higher average ratings?
 
-\mu_quick = \mu_long
+---
 
-## Cooking time does not affect average rating.
+## Hypothesis Testing
 
+### Null Hypothesis:
+There is **no difference in the average rating** between recipes that take **30 minutes or less** and recipes that take **more than 30 minutes** to cook.
 
-## There is a difference in average ratings between quick and long recipes.
+\[
+\mu_{quick} = \mu_{long}
+\]
 
-\mu_quick \neq \mu_long
+This implies that **cooking time does not affect the average rating**.
 
-## Cooking time does affect average rating.
+---
+
+### Alternative Hypothesis:
+There **is a difference in the average rating** between recipes that take **30 minutes or less** and recipes that take **more than 30 minutes** to cook.
+
+\[
+\mu_{quick} \ne \mu_{long}
+\]
+
+This implies that **cooking time does affect the average rating**.
+
+---
+
+## Summary
+Using statistical analysis and hypothesis testing, this project evaluates whether cooking time has a meaningful impact on how recipes are rated.
