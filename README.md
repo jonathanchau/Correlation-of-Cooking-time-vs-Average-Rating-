@@ -18,7 +18,7 @@ Do recipes with longer cooking times tend to have higher average ratings?
 There is **no difference in the average rating** between recipes that take **30 minutes or less** and recipes that take **more than 30 minutes** to cook.
 
 \[
-\mu_{quick} = \mu_{long}
+quick = long
 \]
 
 This implies that **cooking time does not affect the average rating**.
@@ -29,7 +29,7 @@ This implies that **cooking time does not affect the average rating**.
 There **is a difference in the average rating** between recipes that take **30 minutes or less** and recipes that take **more than 30 minutes** to cook.
 
 \[
-\mu_{quick} \ne \mu_{long}
+quick != long
 \]
 
 This implies that **cooking time does affect the average rating**.
