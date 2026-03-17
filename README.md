@@ -72,6 +72,14 @@ In this analysis, we examine the comparison between cooking time and average rat
 
 Although some longer recipes receive high ratings, the overall relationship between cooking time and average rating is weak. Ratings are concentrated near high values across both short and long cooking times, which shows us that cooking time alone does not strongly determine the recipe ratings
 
+### Grouped Table
+| time_group | average_ratings | n_ingredients | calories |
+|------------|-----------------|---------------|----------|
+| Long       | 4.61            | 10.38         | 493.54   |
+| Quick      | 4.64            | 7.81          | 347.87   |
+
+This grouped table shows that longer recipes tend to include more ingredients and higher calorie content, while average ratings remain very similar across both groups. Quick recipes have slightly higher average ratings, but the difference is very small.
+
 
 ---
 
@@ -83,6 +91,8 @@ To study whether missing ratings depend on observed variables, permutation tests
 - A second permutation test using 'n_ingreidnets' showed weaker evidence of dependence, which suggests that missingness does not strongly depend on ingredient count.
 
 These results suggest that rating missingness is not completely random and may be partially explained by observed recipe characteristics.
+
+<iframe src="assets/CookingTimeByMissingness.html" width="100%" height="500" frameborder="0"></iframe>
 
 ---
 
