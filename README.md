@@ -83,13 +83,13 @@ This grouped table shows that longer recipes tend to include more ingredients an
 ## Assessment of Missingness 
 To study whether missing ratings depend on observed variables, permutation tests were performed using 'rating_missing' as an indicator for whether a rating is missing. Users may choose not to leave a rating depending on their personal recipe experience, satisfaction, or uncertainty, which are not directly observed in the dataset. This makes rating a possible MNAR column because the missingness may depend on unobserved user experience rather than only observed recipe features.
 
-- A permutation test comparing cooking time 'minutes' showed that the missingness of 'rating depends on cooking time. Recipes with missing ratings tend to differ in cooking time compared to recipes with observed ratings.
+- A permutation test comparing cooking time 'minutes' showed that the missingness of 'rating' depends on cooking time. Recipes with missing ratings tend to differ in cooking time compared to recipes with observed ratings.
 
 - A second permutation test using 'n_ingreidnets' showed weaker evidence of dependence, which suggests that missingness does not strongly depend on ingredient count.
 
 These results suggest that rating missingness is not completely random and may be partially explained by observed recipe characteristics.
 
-<iframe src="assets/CookingTimeByMissinness.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="assets/CookingTimeByMissingness.html" width="100%" height="500" frameborder="0"></iframe>
 
 ---
 
