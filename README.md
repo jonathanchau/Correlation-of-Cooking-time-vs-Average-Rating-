@@ -74,7 +74,7 @@ Although some longer recipes receive high ratings, the overall relationship betw
 
 ### Grouped Table
 | time_group | average_ratings | n_ingredients | calories |
-|------------|-----------------|---------------|----------|
+|:------------|:-----------------|:---------------|:----------|
 | Long       | 4.61            | 10.38         | 493.54   |
 | Quick      | 4.64            | 7.81          | 347.87   |
 
@@ -92,7 +92,7 @@ To study whether missing ratings depend on observed variables, permutation tests
 
 These results suggest that rating missingness is not completely random and may be partially explained by observed recipe characteristics.
 
-<iframe src="assets/CookingTimeByMissingness.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="assets/CookingTimeVsAverageRating.html" width="100%" height="500" frameborder="0"></iframe>
 
 ---
 
