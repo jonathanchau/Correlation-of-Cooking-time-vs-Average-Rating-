@@ -17,8 +17,8 @@ This topic is interesting because more often than not, the cooking time of the r
 ## Dataset Description 
 The Two datasets that I used included:
 
-- 'Raw_recipes.csv'
-- 'interactions.csv'
+- 'RAW_recipes.csv' (83782 rows, 12 columns)
+- 'interactions.csv' (731927 rows, 5 columns)
 
 The two datasets were merged on the recipe identifiers in order to connect the characteristics fo the recipes alongside the user ratings. 
 
@@ -87,7 +87,7 @@ These results suggest that rating missingness is not completely random and may b
 ### Null Hypothesis:
 There is **no difference in the average rating** between recipes that take **30 minutes or less** and recipes that take **more than 30 minutes** to cook.
 
-$quick = long$
+quick = long
 
 This implies that **cooking time does not affect the average rating**.
 
@@ -96,7 +96,7 @@ This implies that **cooking time does not affect the average rating**.
 ### Alternative Hypothesis:
 There **is a difference in the average rating** between recipes that take **30 minutes or less** and recipes that take **more than 30 minutes** to cook.
 
-$quick \neq long$
+quick != long
 
 This implies that **cooking time does affect the average rating**.
 
@@ -111,7 +111,7 @@ For our test, a permutation test was used to compare the differences within the 
 The difference in mean average ratings between the two groups is the best approach here. 
 
 ### Significance Level
-$\alpha = 0.05$
+alpha = 0.05
 
 ---
 
