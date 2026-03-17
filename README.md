@@ -75,12 +75,12 @@ Although some longer recipes receive high ratings, the overall relationship betw
 
 ---
 
-## Missingness Assessment
-To study whether missing ratings depend on observed variables, permutation tests were performed using 'rating_missing as an indicator for whether a rating is missing.
+## Assessment of Missingness 
+To study whether missing ratings depend on observed variables, permutation tests were performed using 'rating_missing' as an indicator for whether a rating is missing. Users may choose not to leave a rating depending on their personal recipe experience, satisfaction, or uncertainty, which are not directly observed in the dataset. This makes rating a possible MNAR column because the missingness may depend on unobserved user experience rather than only observed recipe features.
 
 - A permutation test comparing cooking time 'minutes' showed that the missingness of 'rating depends on cooking time. Recipes with missing ratings tend to differ in cooking time compared to recipes with observed ratings.
 
-- A second permutation test using 'n_ingreidnets showed weaker evidence of dependence, which suggests that missingness does not strongly depend on ingredient count.
+- A second permutation test using 'n_ingreidnets' showed weaker evidence of dependence, which suggests that missingness does not strongly depend on ingredient count.
 
 These results suggest that rating missingness is not completely random and may be partially explained by observed recipe characteristics.
 
@@ -106,16 +106,15 @@ This implies that **cooking time does affect the average rating**.
 
 ---
 
-## Testing 
+## Framing a Prediction Problem 
 
-### Method
-For our test, a permutation test was used to compare the differences within the average ratings between the two categorical groups (<=30 minutes and > 30 minutes).
+The prediction task in this project is a classification problem where we predict whether a recipe will receive a higher rating based on recipe characteristics that are known before a user interacts with the recipe.
 
-### Test Statistic
-The difference in mean average ratings between the two groups is the best approach here. 
+A binary response variable was created by labeling recipes with higher average ratings as positive outcomes and lower average ratings as negative outcomes. This was done because the response variable is categorical rather than continuous.
 
-### Significance Level
-alpha = 0.05
+The predictor variables used in the model include cooking time (minutes), number of ingredients (n_ingredients), and additional nutritional variables such as calories, protein, and sugar. These features are all available before a recipe is prepared, so the model does not rely on information that would only be known after the user submits a rating.
+
+This allows the model to estimate whether recipe complexity and nutritional composition are associated with recipes that are more likely to receive stronger user ratings.
 
 ---
 
@@ -138,6 +137,10 @@ Within our baseline model, we used a logistic regression that included two varia
 - 'minutes'
 - 'n_ingredients'
 
+These two variables were chosen for the baseline model because they are simple numeric recipe characteristics that may influence how users evaluate recipes. Cooking time shows how long a recipe takes to prepare, which relates directly to recipe complexity and convenience. The number of ingredients reflects how many components are involved in the recipe, which can also affect user perception since recipes with more ingredients may be viewed as more complex or demanding.
+
+The baseline model achieved an accuracy of 0.755.
+
 ### Feature Processing
 Both 'minutes' and 'n_ingriedients' were standardized using the transformers 'StandardScaler' 
 
@@ -151,28 +154,26 @@ The final model however included some nutrition variables. So overall, it came o
 - 'protein'
 - 'sugar'
 
-These variables were able to improve the predictive power of our model.
+The final model added nutritional variables because the nutrition of a recipe could  influence user ratings beyond its preparation complexity. Calories were included because richer or heavier meals may affect overall satisfaction differently than lighter meals. Protein was added because protein content often reflects meal substance and may relate to how filling or complete a recipe feels. Sugar was included because sweetness can influence preference, especially with dessert or snack recipes.
+
+The final model achieved an accuracy of 0.755. While nutritional variables add additional recipe information, they do not substantially improve predictive performance beyond the simpler baseline features.
 
 ### Model Choice 
-Logistic regression was used in this case.
+Logistic regression was used in this case because the response variable is binary and all the variables we included are numeric.
 
 ---
 
-## Fiarness Analysis
+## Fairness Analysis
 The model accuracy was compared across two different groups including:
 - Quick Recipes (less than 30 minutes)
 - Long recipes (more than 30 minutes)
 
----
+The fairness metric used was classification accuracy across both groups. Quick recipes had an accuracy of approximately 76%, while longer recipes had an accuracy of approximately 75%.
 
-## Result
+This small difference suggests that the model performs similarly across both groups, meaning there is no strong evidence that the model unfairly favors either quick or long recipes.
 
 The observed difference in mean average ratings between quick recipes and longer recipes was approximately 0.031 with a p-value of 0.001.
-
-Quick recipes had a slightly higher mean rating than longer recipes.
 
 The permutation test produced a p-value less than 0.05, so we reject the null hypothesis.
 
 This suggests that the difference in ratings is unlikely to be due to random chance alone.
-
-However, the difference is very small in magnitude, meaning cooking time may have statistical significance but limited practical effect on recipe ratings.
