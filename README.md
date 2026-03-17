@@ -1,7 +1,7 @@
 # Correlation of Cooking Time vs Average Rating
 
 ## Project Overview
-This project investigates the relationship between the **cooking time of a recipe** and its **average rating**.
+This project investigates the relationship between the cooking time of a recipe** and its average rating.
 
 The goal is to determine whether recipes that take longer to cook tend to receive higher ratings than recipes that take less time.
 
@@ -73,10 +73,7 @@ In this analysis, we examine the comparison between cooking time and average rat
 Although some longer recipes receive high ratings, the overall relationship between cooking time and average rating is weak. Ratings are concentrated near high values across both short and long cooking times, which shows us that cooking time alone does not strongly determine the recipe ratings
 
 ### Grouped Table
-| time_group | average_ratings | n_ingredients | calories |
-|------------|-----------------|---------------|----------|
-| Long       | 4.61            | 10.38         | 493.54   |
-| Quick      | 4.64            | 7.81          | 347.87   |
+![alt text](image-3.png)
 
 This grouped table shows that longer recipes tend to include more ingredients and higher calorie content, while average ratings remain very similar across both groups. Quick recipes have slightly higher average ratings, but the difference is very small.
 
