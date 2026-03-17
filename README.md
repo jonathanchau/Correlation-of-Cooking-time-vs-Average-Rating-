@@ -57,14 +57,18 @@ For this, we conducted both Univariate Analysis and Bivariate Analysis.
 Here, we examined:
 - Distribution of cooking times 
 - Distribution of average ratings
-![alt text](image.png)
+
+<iframe src="DistributionOfCookingTime.png" width="100%" height="500" frameborder="0"></iframe>
+
+<iframe src="DistributionOfAverageRecipeRatings.png" width="100%" height="500" frameborder="0"></iframe>
 
 The graph shown is right-skewed, we note that most recipes have lower preparation times
 
 ### Bivariate Analysis
 In this analysis, we examine the comparison between cooking time and average rating to see if there is a correlation between longer cooking times and rating differences.
 
-![alt text](image-1.png)
+
+<iframe src="CookingTimevsAverageRating.png.png" width="100%" height="500" frameborder="0"></iframe>
 
 Although some longer recipes receive high ratings, the overall relationship between cooking time and average rating is weak. Ratings are concentrated near high values across both short and long cooking times, which shows us that cooking time alone does not strongly determine the recipe ratings
 
