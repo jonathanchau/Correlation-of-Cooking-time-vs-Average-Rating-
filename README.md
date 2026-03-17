@@ -32,6 +32,8 @@ After merging, the main columns we want to look at include:
 - 'protein': grams of protein per recipe
 - 'sugar': grams of sugar per recipe
 
+---
+
 ## Data Cleaning
 
 The data cleaning process before the actual analysis includes: 
@@ -44,10 +46,12 @@ The data cleaning process before the actual analysis includes:
 
 Given this, the dataset sohuld include recipes with realiable and realistic information. 
 
+---
+
 ## Exploratory Data Analysis
 For this, we conducted both Univariate Analysis and Bivariate Analysis.
 
--- 
+
 
 ### Univariate Analysis
 Here, we examined:
@@ -60,20 +64,23 @@ The graph shown is right-skewed, we note that most recipes have lower preparatio
 ### Bivariate Analysis
 In this analysis, we examine the comparison between cooking time and average rating to see if there is a correlation between longer cooking times and rating differences.
 
+![alt text](image-1.png)
+
 Although some longer recipes receive high ratings, the overall relationship between cooking time and average rating is weak. Ratings are concentrated near high values across both short and long cooking times, which shows us that cooking time alone does not strongly determine the recipe ratings
 
-*** FINISH THIS***
+
+---
 
 ## Missingness Assessment
 To study whether missing ratings depend on observed variables, permutation tests were performed using 'rating_missing as an indicator for whether a rating is missing.
 
-A permutation test comparing cooking time 'minutes' showed that the missingness of 'rating depends on cooking time. Recipes with missing ratings tend to differ in cooking time compared to recipes with observed ratings.
+- A permutation test comparing cooking time 'minutes' showed that the missingness of 'rating depends on cooking time. Recipes with missing ratings tend to differ in cooking time compared to recipes with observed ratings.
 
-A second permutation test using 'n_ingreidnets showed weaker evidence of dependence, which suggests that missingness does not strongly depend on ingredient count.
+- A second permutation test using 'n_ingreidnets showed weaker evidence of dependence, which suggests that missingness does not strongly depend on ingredient count.
 
 These results suggest that rating missingness is not completely random and may be partially explained by observed recipe characteristics.
 
-
+---
 
 ## Hypothesis Testing
 
@@ -106,10 +113,7 @@ The difference in mean average ratings between the two groups is the best approa
 ### Significance Level
 $\alpha = 0.05$
 
-## Summary
-Using statistical analysis and hypothesis testing, this project evaluates whether cooking time has a meaningful impact on how recipes are rated.
-
-
+---
 
 ## Key Variables
 Key variables included within the test:
@@ -123,10 +127,7 @@ Key variables included within the test:
 
 Nutrional values extracted from original nutrition field for analysis 
 
-
-
-
-
+---
 
 ## Baseline Model
 Within our baseline model, we used a logistic regression that included two variables:
@@ -136,6 +137,7 @@ Within our baseline model, we used a logistic regression that included two varia
 ### Feature Processing
 Both 'minutes' and 'n_ingriedients' were standardized using the transformers 'StandardScaler' 
 
+---
 
 ## Final Model
 The final model however included some nutrition variables. So overall, it came out to be:
@@ -150,10 +152,14 @@ These variables were able to improve the predictive power of our model.
 ### Model Choice 
 Logistic regression was used in this case.
 
+---
+
 ## Fiarness Analysis
 The model accuracy was compared across two different groups including:
 - Quick Recipes (less than 30 minutes)
 - Long recipes (more than 30 minutes)
+
+---
 
 ### Result
 
