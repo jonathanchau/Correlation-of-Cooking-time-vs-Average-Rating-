@@ -161,7 +161,7 @@ The model accuracy was compared across two different groups including:
 
 ---
 
-### Result
+## Result
 
 The observed difference in mean average ratings between quick recipes and longer recipes was approximately 0.031 with a p-value of 0.001.
 
