@@ -74,7 +74,7 @@ Although some longer recipes receive high ratings, the overall relationship betw
 
 ### Grouped Table
 | time_group | average_ratings | n_ingredients | calories |
-|:------------|:-----------------|:---------------|:----------|
+|------------|-----------------|---------------|----------|
 | Long       | 4.61            | 10.38         | 493.54   |
 | Quick      | 4.64            | 7.81          | 347.87   |
 
